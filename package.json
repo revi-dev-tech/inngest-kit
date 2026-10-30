@@ -1,0 +1,24 @@
+{
+  "name": "@revi/inngest-kit",
+  "version": "1.0.0",
+  "description": "Shared Inngest client, event naming and function defaults for Revi apps on a shared Inngest server",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "prepare": "npm run build"
+  },
+  "peerDependencies": {
+    "inngest": ">=3.40.0 <4"
+  },
+  "devDependencies": {
+    "inngest": "^3.54.2",
+    "typescript": "^5.6.0"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}
