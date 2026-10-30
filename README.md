@@ -2,6 +2,8 @@
 
 Shared Inngest setup for Revi apps that run on one shared, self-hosted Inngest server. It keeps apps from clashing: every app gets a unique id with a random key at the end, event names are built from that id, functions get a default concurrency cap, and the failure logger is scoped to the app.
 
+AI agents onboarding a new app: follow [AI_ONBOARDING.md](AI_ONBOARDING.md) step by step.
+
 ## Install
 
 ```
@@ -76,7 +78,8 @@ export const logInngestFailure = createFailureLogger(inngest, {
 ## Environment variables (set on each app)
 
 ```
-INNGEST_BASE_URL=http://<inngest-service>.railway.internal:8288
+INNGEST_BASE_URL=<public https address of the shared server, given by the server owner>
+# never a .railway.internal address: apps do not run inside that network
 INNGEST_EVENT_KEY=<same as the server>
 INNGEST_SIGNING_KEY=<same as the server>
 ```
