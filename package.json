@@ -1,9 +1,12 @@
 {
   "name": "@revi/inngest-kit",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Shared Inngest client, event naming and function defaults for Revi apps on a shared Inngest server",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "bin": {
+    "inngest-kit": "dist/cli.js"
+  },
   "files": [
     "dist"
   ],
@@ -16,6 +19,7 @@
     "inngest": ">=3.40.0 <4"
   },
   "devDependencies": {
+    "@types/node": "^22.0.0",
     "inngest": "^3.54.2",
     "typescript": "^5.6.0"
   },

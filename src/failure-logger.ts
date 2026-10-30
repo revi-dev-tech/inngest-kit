@@ -6,7 +6,7 @@ import {
   FUNCTION_FAILED_EVENT,
 } from './constants';
 import type { FailureHandler, FailureInfo, FunctionFailedData } from './types';
-import { assertSlug } from './validation';
+import { assertAppId } from './validation';
 
 /** Inngest prefixes every function id with its app id, e.g. "jobdiva-cv-pipeline-hubspot-sync" */
 function functionIdPrefix(appId: string): string {
@@ -41,7 +41,7 @@ export function createFailureLogger(
   client: Inngest.Any,
   { appId, onFailure }: { appId: string; onFailure: FailureHandler }
 ) {
-  assertSlug('appId', appId);
+  assertAppId(appId);
   const prefix = functionIdPrefix(appId);
 
   return client.createFunction(
