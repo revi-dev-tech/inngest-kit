@@ -5,7 +5,7 @@ Shared Inngest setup for Revi apps that run on one shared, self-hosted Inngest s
 ## Install
 
 ```
-npm install github:revi-dev-tech/inngest-kit#v1.1.0
+npm install github:revi-dev-tech/inngest-kit#v1.1.1
 ```
 
 The package builds itself on install (`prepare` script). `inngest` is a peer dependency, so the app must already depend on it.

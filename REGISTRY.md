@@ -4,3 +4,4 @@ Every app on the shared Inngest server is listed here. Add a row in a pull reque
 
 | App id | Owner | Repo | Added |
 |---|---|---|---|
+| jobdiva-cv-pipeline-x1x6e | Omar Shahen | revi-dev-tech/jobdiva | 2026-10-30 |
